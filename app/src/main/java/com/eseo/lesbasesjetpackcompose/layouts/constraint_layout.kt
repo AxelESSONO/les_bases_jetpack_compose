@@ -39,7 +39,11 @@ fun MyConstraintLayout(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .size(200.dp)
                 .background(color = Color.Magenta)
+                .constrainAs(box2) {
+                    bottom.linkTo(box1.top)
+                    end.linkTo(box1.end)
+                    start.linkTo(box1.start)
+                }
         )
-
     }
 }
